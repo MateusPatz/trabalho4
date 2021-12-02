@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--HTML Based on slow page message of github-->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'">
+    <meta content="origin" name="referrer">
+    <meta name="viewport" content="width=device-width">
+    <title>Trabalho 4! &middot; SSL Login</title>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #f6f8fa;
+        color: #24292e;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .container { margin: 50px auto; max-width: 600px; text-align: center; padding: 0 24px; }
+
+      a { color: #4183c4; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      h1 { letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px; text-shadow: 0 1px 0 #fff; }
+      p { color: rgba(0, 0, 0, 0.5); margin: 10px 0 10px; font-size: 18px; font-weight: 200; line-height: 1.6em;}
+
+      ul { list-style: none; margin: 25px 0; padding: 0; }
+      li { display: table-cell; font-weight: bold; width: 1%; }
+
+      .logo { display: inline-block; margin-top: 35px; }
+      .logo-img-2x { display: none; }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .logo-img-1x { display: none; }
+        .logo-img-2x { display: inline-block; }
+      }
+
+      #suggestions {
+        margin-top: 35px;
+        color: #ccc;
+      }
+      #suggestions a {
+        color: #666666;
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <p>
+        <img style="max-width: 200px;" src="data:image/png;base64,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">
+      </p>
+
+      <p><strong>Trabalho 4</strong></p>
+      <p>Autenticação falhou!</p>
+      <p><b>{{.Error}}</b></p>
+      <p>Para efetuar o login em nosso sistema é necessario que o usuario comprove a sua identidade por meio de um certificado digital valído.</p>
+      <p>Um certificado digital valido necessita estar com a validade em dia, não estar revogado e ser assinado digitalmente pela Authoridade de Certificação Raiz {{.CARootNames}}</p>
+      <a href="/">Retornar a Home</a>
+      <div id="suggestions">
+        <a href="https://unisinos.br">Unisinos</a> &mdash;
+        <a href="https://www.linkedin.com/in/mateus-patz/">Contact</a> &mdash;
+        <a href="https://github.com/MateusPatz/trabalho4">Source</a>
+      </div>
+
+    </div>
+  </body>
+</html>
